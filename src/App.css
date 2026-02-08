@@ -50,7 +50,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
   background: #0b0b0f;
   color: #e8e8ec;
-  min-height: auto;
+  min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
 }
@@ -106,7 +106,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
 /* ===== Hero Section ===== */
 .hero {
-  min-height: auto;
+  min-height: 100vh;
   padding: 5rem 2rem 3rem 4rem;
   text-align: center;
   background: linear-gradient(180deg, rgba(11, 11, 15, 0.7) 0%, rgba(11, 11, 15, 0.5) 50%, rgba(11, 11, 15, 0.85) 100%),
@@ -189,7 +189,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
 /* ===== About Section ===== */
 .about {
-  min-height: auto;
+  min-height: 100vh;
   padding: 5rem 2rem 3rem;
   text-align: center;
   position: relative;
@@ -243,7 +243,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
 /* ===== Services Section ===== */
 .services {
-  min-height: auto;
+  min-height: 100vh;
   padding: 5rem 2rem 3rem;
   text-align: center;
   position: relative;
@@ -326,7 +326,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
 /* ===== Contact Section ===== */
 .contact {
-  min-height: auto;
+  min-height: 100vh;
   padding: 5rem 2rem 3rem;
   text-align: center;
   position: relative;
