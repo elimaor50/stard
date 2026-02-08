@@ -4,6 +4,7 @@ html {
   overflow: hidden;
   height: 100%;
   font-size: 16px;
+  background: #0b0b0f;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
   padding: 0;
   overflow: hidden;
   height: 100%;
+  background: #0b0b0f;
 }
 
 #root {
@@ -897,8 +899,8 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
   /* Hero */
   .hero {
-    min-height: auto;
-    padding: 5.5rem 1rem 1.5rem;
+    min-height: 100vh;
+    padding: 5rem 1rem 2rem;
   }
 
   .hero h1 {
@@ -920,10 +922,9 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
   /* About */
   .about {
-    padding: 5.5rem 1.2rem 2rem;
-    min-height: auto;
-    justify-content: flex-start;
-    scroll-margin-top: 100px;
+    min-height: 100vh;
+    justify-content: center;
+    scroll-margin-top: 90px;
   }
 
   .about h2, .services h2, .contact h2 {
@@ -951,10 +952,9 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
   /* Services */
   .services {
-    padding: 5.5rem 1rem 2rem;
-    min-height: auto;
-    justify-content: flex-start;
-    scroll-margin-top: 100px;
+    min-height: 100vh;
+    justify-content: center;
+    scroll-margin-top: 90px;
   }
 
   .service-list {
@@ -994,10 +994,9 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
   /* Contact */
   .contact {
-    padding: 5.5rem 1.2rem 2rem;
-    min-height: auto;
-    justify-content: flex-start;
-    scroll-margin-top: 100px;
+    min-height: 100vh;
+    justify-content: center;
+    scroll-margin-top: 90px;
   }
 
   .contact > p {
