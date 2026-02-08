@@ -168,14 +168,23 @@ function App() {
           <h1>The Future of High-Performance Electrification</h1>
           <p>Pioneering EV technology for Global Motorsport and Automotive Manufacturers.</p>
           <div className="hero-highlights">
-            <span className="highlight-badge">Official Ford Performance Technical Partner</span>
-            <span className="highlight-badge">Creators of the World's First All-Electric Rallycross Car</span>
+              <div className="highlight-card">
+                <span className="highlight-icon">??</span>
+                <span className="highlight-label">Official Ford Performance</span>
+                <span className="highlight-sub">Technical Partner</span>
+              </div>
+              <div className="highlight-divider"></div>
+              <div className="highlight-card">
+                <span className="highlight-icon">?</span>
+                <span className="highlight-label">World's First</span>
+                <span className="highlight-sub">All-Electric Rallycross Car</span>
+              </div>
           </div>
           <a href="#about" className="cta">Discover More</a>
         </section>
 
         <section id="about" className="about">
-          <h2>About STARD</h2>
+          <h2>Story of STARD</h2>
           <hr className="section-line" />
           <p>STARD — Stohl Advanced Research and Development — is part of the Stohl Group, founded by WRC legend Manfred Stohl. Based in Gross-Enzersdorf near Vienna, Austria, STARD bridges decades of traditional World Rally Championship experience with the new era of electric mobility.</p>
           <p>We don't just build cars — we develop in-house battery systems (STARD REVO), proprietary VCU software, and complete high-voltage powertrains that comply with the strictest FIA safety standards. As official technical partners of Ford Performance, we engineered the Ford SuperVan 4.2, the F-150 Switchgear, and the legendary Mach-E 1400.</p>
@@ -226,6 +235,28 @@ function App() {
           <hr className="section-line" />
           <p>Partner with us for your next high-performance EV project. Whether you're an automotive OEM, professional race team, or specialized tech innovator — let's build the future together.</p>
           <p className="contact-address">Stohl Strasse 1, 2301 Gross-Enzersdorf, Austria</p>
+          <div className="contact-details">
+            <div className="contact-detail-item">
+              <span className="contact-detail-icon">??</span>
+              <span>+43 2249 28050</span>
+            </div>
+            <div className="contact-detail-item">
+              <span className="contact-detail-icon">??</span>
+              <span>+43 2249 28903</span>
+            </div>
+            <div className="contact-detail-item">
+              <span className="contact-detail-icon">??</span>
+              <a href="mailto:office@stard.at">office@stard.at</a>
+            </div>
+            <div className="contact-detail-item">
+              <span className="contact-detail-icon">??</span>
+              <a href="https://facebook.com/stard.austria" target="_blank" rel="noopener noreferrer">facebook.com/stard.austria</a>
+            </div>
+            <div className="contact-detail-item">
+              <span className="contact-detail-icon">??</span>
+              <a href="https://instagram.com/stard.austria" target="_blank" rel="noopener noreferrer">instagram.com/stard.austria</a>
+            </div>
+          </div>
           <form className="contact-form">
             <input type="text" placeholder="Your Name" />
             <input type="email" placeholder="Your Email" />
