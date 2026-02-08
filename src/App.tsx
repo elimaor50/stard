@@ -169,13 +169,13 @@ function App() {
           <p>Pioneering EV technology for Global Motorsport and Automotive Manufacturers.</p>
           <div className="hero-highlights">
               <div className="highlight-card">
-                <span className="highlight-icon">&#127937;</span>
+                <img src={`${import.meta.env.BASE_URL}119-1191347_ford-racing-logo-png-transparent-ford-performance-racing-logo.png`} alt="Ford Performance" className="highlight-icon-img" />
                 <span className="highlight-label">Official Ford Performance</span>
                 <span className="highlight-sub">Technical Partner</span>
               </div>
               <div className="highlight-divider"></div>
               <div className="highlight-card">
-                <span className="highlight-icon">&#9889;</span>
+                <img src={`${import.meta.env.BASE_URL}STARD-Ford-Fiesta-ERX2-1.webp`} alt="Electric Rallycross" className="highlight-icon-img" />
                 <span className="highlight-label">World's First</span>
                 <span className="highlight-sub">All-Electric Rallycross Car</span>
               </div>
