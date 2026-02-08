@@ -1,6 +1,6 @@
-# STRAD - Automotive Engineering Website
+# STARD - Automotive Engineering Website
 
-A modern, functional website for STRAD, an Austrian car engineering company specializing in developing and engineering cars and parts for major auto companies like Ford.
+A modern, functional website for STARD, an Austrian car engineering company specializing in developing and engineering cars and parts for major auto companies like Ford.
 
 ## Features
 
