@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+﻿import { useEffect, useState, useRef } from 'react'
 import './App.css'
 
 interface ServiceModal {
@@ -105,6 +105,18 @@ const serviceModals: ServiceModal[] = [
 function App() {
   const [activeModal, setActiveModal] = useState<string | null>(null)
   const [activeSection, setActiveSection] = useState<string>('home')
+  const navRefs = useRef<{ [key: string]: HTMLAnchorElement | null }>({})
+  const indicatorRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // Update indicator position when active section changes
+    const activeLink = navRefs.current[activeSection]
+    if (activeLink && indicatorRef.current) {
+      const { offsetLeft, offsetWidth } = activeLink
+      indicatorRef.current.style.left = `${offsetLeft}px`
+      indicatorRef.current.style.width = `${offsetWidth}px`
+    }
+  }, [activeSection])
 
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
@@ -195,10 +207,11 @@ function App() {
           <img src={`${import.meta.env.BASE_URL}stard-logo.png`} alt="STARD Logo" className="logo-img" />
         </a>
         <nav className="nav">
-          <a href="#home" className={activeSection === 'home' ? 'active' : ''}>Home</a>
-          <a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a>
-          <a href="#services" className={activeSection === 'services' ? 'active' : ''}>Services</a>
-          <a href="#contact" className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
+          <div className="nav-indicator" ref={indicatorRef}></div>
+          <a href="#home" ref={el => navRefs.current['home'] = el} className={activeSection === 'home' ? 'active' : ''}>Home</a>
+          <a href="#about" ref={el => navRefs.current['about'] = el} className={activeSection === 'about' ? 'active' : ''}>About</a>
+          <a href="#services" ref={el => navRefs.current['services'] = el} className={activeSection === 'services' ? 'active' : ''}>Services</a>
+          <a href="#contact" ref={el => navRefs.current['contact'] = el} className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
         </nav>
       </header>
       <main>
@@ -215,7 +228,6 @@ function App() {
                   <h3 className="showcase-title">Official Ford Performance</h3>
                   <p className="showcase-subtitle">Technical Partner</p>
                 </div>
-                <div className="showcase-glow"></div>
               </a>
               <a href="#services" className="showcase-card" style={{backgroundImage: `url(${import.meta.env.BASE_URL}STARD-Ford-Fiesta-ERX2-1.webp)`}}>
                 <div className="showcase-img-container">
@@ -226,7 +238,6 @@ function App() {
                   <h3 className="showcase-title">World's First</h3>
                   <p className="showcase-subtitle">All-Electric Rallycross Car</p>
                 </div>
-                <div className="showcase-glow"></div>
               </a>
           </div>
           <a href="#about" className="cta">Learn More About Us</a>

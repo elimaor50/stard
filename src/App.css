@@ -86,6 +86,46 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 .nav {
   display: flex;
   gap: 0.5rem;
+  position: relative;
+}
+
+.nav-indicator {
+  position: absolute;
+  height: 100%;
+  background: rgba(0, 212, 255, 0.15);
+  border-radius: 8px;
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  z-index: 0;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+  top: 0;
+}
+
+.nav-indicator::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 255, 255, 0.6) 50%, 
+    transparent 100%);
+  border-radius: 8px;
+  animation: electricSlide 0.8s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes electricSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
 }
 
 .nav a {
@@ -95,25 +135,40 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: color 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), 
-              background 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-              transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: color 0.3s ease;
   padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    transparent 100%);
+  z-index: -1;
+  transition: left 0.6s ease;
+}
+
+.nav a:hover::before {
+  left: 100%;
 }
 
 .nav a:hover {
   color: #00d4ff;
-  background: rgba(0, 212, 255, 0.06);
 }
 
 .nav a.active {
   color: #00d4ff;
-  background: rgba(0, 212, 255, 0.15);
-  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2);
-  transform: scale(1.05);
 }
 
 /* ===== Hero Section ===== */
@@ -186,9 +241,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(11, 11, 15, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 18px;
-  backdrop-filter: blur(40px) saturate(150%);
   text-decoration: none;
   color: inherit;
   width: 400px;
@@ -196,7 +249,25 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.showcase-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    transparent 100%);
+  z-index: 3;
+  transition: left 0.6s ease;
+}
+
+.showcase-card:hover::before {
+  left: 100%;
 }
 
 .showcase-card-logo {
@@ -218,28 +289,10 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   animation-delay: -3s;
 }
 
-.showcase-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(0, 255, 136, 0.2));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
 @keyframes gradientRotate {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-.showcase-card:hover::before {
-  opacity: 1;
 }
 
 .showcase-card:hover::after {
@@ -249,9 +302,6 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 .showcase-card:hover {
   transform: translateY(-8px) scale(1.02);
   border-color: rgba(0, 212, 255, 0.4);
-  box-shadow: 
-    0 20px 60px rgba(0, 212, 255, 0.25),
-    0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .showcase-card:active {
@@ -280,6 +330,11 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   z-index: 2;
   text-align: center;
   align-items: center;
+  transition: opacity 0.4s;
+}
+
+.showcase-card:hover .showcase-info {
+  opacity: 0.1;
 }
 
 .showcase-tag {
@@ -311,30 +366,6 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
-.showcase-glow {
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 140px;
-  height: 140px;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0.6;
-  transition: opacity 0.4s;
-}
-
-.showcase-card:hover .showcase-glow {
-  opacity: 1;
-}
-
-.showcase-card:nth-child(2) .showcase-glow {
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.08) 0%, transparent 70%);
-  top: auto;
-  bottom: -30px;
-  left: auto;
-  right: -30px;
-}
 /* ===== Buttons ===== */
 .cta {
   background: #00d4ff;
@@ -349,6 +380,26 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   text-decoration: none;
   display: inline-block;
   letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.6) 50%, 
+    transparent 100%);
+  transition: left 0.6s ease;
+}
+
+.cta:hover::before {
+  left: 100%;
 }
 
 .cta:hover {
@@ -469,6 +520,25 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   overflow: hidden;
   text-align: left;
   position: relative;
+}
+
+.service::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    transparent 100%);
+  z-index: 1;
+  transition: left 0.6s ease;
+}
+
+.service:hover::before {
+  left: 100%;
 }
 
 .service:hover {
@@ -685,6 +755,26 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   color: #a0a0b0;
   transition: all 0.3s;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.4) 50%, 
+    transparent 100%);
+  transition: left 0.6s ease;
+}
+
+.social-link:hover::before {
+  left: 100%;
 }
 
 .social-link:hover {
