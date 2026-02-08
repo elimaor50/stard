@@ -632,10 +632,10 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 }
 
 .contact-detail-icon {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: #00d4ff;
-  width: 20px;
+  min-width: 40px;
   text-align: center;
 }
 
