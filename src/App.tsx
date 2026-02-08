@@ -208,10 +208,10 @@ function App() {
         </a>
         <nav className="nav">
           <div className="nav-indicator" ref={indicatorRef}></div>
-          <a href="#home" ref={el => navRefs.current['home'] = el} className={activeSection === 'home' ? 'active' : ''}>Home</a>
-          <a href="#about" ref={el => navRefs.current['about'] = el} className={activeSection === 'about' ? 'active' : ''}>About</a>
-          <a href="#services" ref={el => navRefs.current['services'] = el} className={activeSection === 'services' ? 'active' : ''}>Services</a>
-          <a href="#contact" ref={el => navRefs.current['contact'] = el} className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
+          <a href="#home" ref={el => { navRefs.current['home'] = el }} className={activeSection === 'home' ? 'active' : ''}>Home</a>
+          <a href="#about" ref={el => { navRefs.current['about'] = el }} className={activeSection === 'about' ? 'active' : ''}>About</a>
+          <a href="#services" ref={el => { navRefs.current['services'] = el }} className={activeSection === 'services' ? 'active' : ''}>Services</a>
+          <a href="#contact" ref={el => { navRefs.current['contact'] = el }} className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
         </nav>
       </header>
       <main>
