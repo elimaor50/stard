@@ -50,7 +50,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
   background: #0b0b0f;
   color: #e8e8ec;
-  min-height: 100vh;
+  min-height: auto;
   width: 100%;
   overflow-x: hidden;
 }
@@ -60,7 +60,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
   padding: 20px 60px;
   background: rgba(11, 11, 15, 0.95);
   backdrop-filter: blur(20px);
@@ -72,7 +72,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 }
 
 .logo-img {
-  height: 110px;
+  height: 45px;
   width: auto;
   transition: opacity 0.3s;
 }
@@ -87,14 +87,14 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 }
 
 .nav a {
-  font-size: 32px;
+  font-size: 1.05rem;
   color: #a0a0b0;
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: color 0.3s, background 0.3s;
-  padding: 16px 30px;
+  padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
 }
@@ -106,11 +106,11 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
 /* ===== Hero Section ===== */
 .hero {
-  min-height: 100vh;
-  padding: 8rem 2rem 4rem;
+  min-height: auto;
+  padding: 5rem 2rem 3rem 4rem;
   text-align: center;
   background: linear-gradient(180deg, rgba(11, 11, 15, 0.7) 0%, rgba(11, 11, 15, 0.5) 50%, rgba(11, 11, 15, 0.85) 100%),
-    url('/2022_FORD_E-TRANSIT_SUPERVAN_23.webp') center/cover no-repeat;
+    url('/stard/2022_FORD_E-TRANSIT_SUPERVAN_23.webp') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,17 +120,17 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 }
 
 .hero h1 {
-  font-size: 120px;
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: #ffffff;
   line-height: 1.15;
   max-width: 90%;
 }
 
 .hero p {
-  font-size: 42px;
-  margin-bottom: 50px;
+  font-size: 1.25rem;
+  margin-bottom: 24px;
   max-width: 80%;
   line-height: 1.7;
   color: #b0b0c0;
@@ -141,16 +141,16 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin-bottom: 60px;
+  margin-bottom: 28px;
 }
 
 .highlight-badge {
   background: rgba(0, 212, 255, 0.1);
   border: 1px solid rgba(0, 212, 255, 0.3);
   color: #00d4ff;
-  padding: 18px 36px;
+  padding: 10px 20px;
   border-radius: 50px;
-  font-size: 26px;
+  font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
@@ -160,8 +160,8 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   background: #00d4ff;
   color: #0b0b0f;
   border: none;
-  padding: 26px 70px;
-  font-size: 30px;
+  padding: 14px 36px;
+  font-size: 1.05rem;
   font-weight: 700;
   cursor: pointer;
   border-radius: 10px;
@@ -189,11 +189,11 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
 /* ===== About Section ===== */
 .about {
-  min-height: 100vh;
-  padding: 8rem 2rem;
+  min-height: auto;
+  padding: 5rem 2rem 3rem;
   text-align: center;
   position: relative;
-  background: url('/109965277_3000882840037309_3005027767678789798_n.jpg') center/cover no-repeat;
+  background: url('/stard/109965277_3000882840037309_3005027767678789798_n.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,14 +215,14 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 }
 
 .about h2, .services h2, .contact h2 {
-  font-size: 84px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 24px;
   color: #ffffff;
 }
 
 .about p {
-  font-size: 34px;
+  font-size: 1.1rem;
   max-width: 85%;
   margin: 0 auto 32px;
   line-height: 1.8;
@@ -231,7 +231,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
 .about-mission {
   font-style: italic;
-  font-size: 36px;
+  font-size: 1.15rem;
   color: #00d4ff;
   margin-top: 24px;
   max-width: 80%;
@@ -243,11 +243,11 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
 /* ===== Services Section ===== */
 .services {
-  min-height: 100vh;
-  padding: 8rem 2rem;
+  min-height: auto;
+  padding: 5rem 2rem 3rem;
   text-align: center;
   position: relative;
-  background: url('/483994457_1220762459537378_4467373113225619581_n.jpg') center/cover no-repeat;
+  background: url('/stard/483994457_1220762459537378_4467373113225619581_n.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -296,41 +296,41 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
 .service-img {
   width: 100%;
-  height: 400px;
+  height: 220px;
   object-fit: cover;
   display: block;
 }
 
 .service-content {
-  padding: 44px;
+  padding: 24px;
 }
 
 .service h3 {
   color: #ffffff;
-  font-size: 44px;
+  font-size: 1.5rem;
   margin-bottom: 22px;
   font-weight: 600;
 }
 
 .service p {
-  font-size: 28px;
+  font-size: 1rem;
   line-height: 1.7;
   color: #a0a0b0;
   margin-bottom: 32px;
 }
 
 .service .cta {
-  font-size: 26px;
-  padding: 20px 50px;
+  font-size: 0.95rem;
+  padding: 12px 28px;
 }
 
 /* ===== Contact Section ===== */
 .contact {
-  min-height: 100vh;
-  padding: 8rem 2rem;
+  min-height: auto;
+  padding: 5rem 2rem 3rem;
   text-align: center;
   position: relative;
-  background: url('/475139064_1184873546459603_2670204463927209115_n.jpg') center/cover no-repeat;
+  background: url('/stard/475139064_1184873546459603_2670204463927209115_n.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -352,7 +352,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 }
 
 .contact > p {
-  font-size: 34px;
+  font-size: 1.1rem;
   color: #a0a0b0;
   margin-bottom: 24px;
   max-width: 85%;
@@ -360,9 +360,9 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 }
 
 .contact-address {
-  font-size: 28px;
+  font-size: 1rem;
   color: #00d4ff;
-  margin-bottom: 50px;
+  margin-bottom: 24px;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
@@ -380,12 +380,12 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 28px 32px;
+  padding: 14px 18px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.07);
   color: #ffffff;
-  font-size: 28px;
+  font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.3s, background 0.3s;
 }
@@ -410,8 +410,8 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   background: #00d4ff;
   color: #0b0b0f;
   border: none;
-  padding: 28px 70px;
-  font-size: 30px;
+  padding: 14px 36px;
+  font-size: 1.05rem;
   font-weight: 700;
   cursor: pointer;
   border-radius: 12px;
@@ -432,13 +432,13 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   padding: 3rem;
   background: rgba(11, 11, 15, 0.95);
   color: #505060;
-  font-size: 22px;
+  font-size: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer-address {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 0.85rem;
   color: #404050;
 }
 
@@ -499,7 +499,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  font-size: 28px;
+  font-size: 1rem;
   cursor: pointer;
   z-index: 10;
   display: flex;
@@ -519,7 +519,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 .modal-hero {
   position: relative;
   width: 100%;
-  height: 420px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -537,42 +537,42 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 50px;
+  padding: 30px;
 }
 
 .modal-title {
-  font-size: 52px;
+  font-size: 2rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 12px;
 }
 
 .modal-headline {
-  font-size: 28px;
+  font-size: 1rem;
   color: #00d4ff;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .modal-body {
-  padding: 50px;
+  padding: 30px;
 }
 
 .modal-intro {
-  font-size: 26px;
+  font-size: 0.95rem;
   line-height: 1.8;
   color: #c8c8d8;
-  margin-bottom: 44px;
+  margin-bottom: 24px;
   padding-bottom: 44px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .modal-section {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .modal-section-heading {
-  font-size: 34px;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
@@ -590,7 +590,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 }
 
 .modal-section-text {
-  font-size: 24px;
+  font-size: 0.95rem;
   line-height: 1.8;
   color: #a0a0b0;
   margin-bottom: 20px;
@@ -606,7 +606,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 }
 
 .modal-spec-item {
-  font-size: 22px;
+  font-size: 0.9rem;
   line-height: 1.7;
   color: #c8c8d8;
   display: flex;
@@ -647,8 +647,8 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   color: #a0a0b0;
-  padding: 22px 50px;
-  font-size: 26px;
+  padding: 12px 28px;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   border-radius: 10px;
@@ -702,7 +702,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   }
 
   .about-mission {
-    font-size: 22px;
+    font-size: 0.9rem;
   }
 
   .contact-form button {
@@ -722,7 +722,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   }
 
   .modal-title {
-    font-size: 28px;
+    font-size: 1rem;
   }
 
   .modal-headline {
@@ -738,7 +738,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   }
 
   .modal-section-heading {
-    font-size: 22px;
+    font-size: 0.9rem;
   }
 
   .modal-section-text {

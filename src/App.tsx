@@ -15,7 +15,7 @@ const serviceModals: ServiceModal[] = [
     id: 'powertrain',
     title: 'EV Powertrain Development',
     headline: 'High-Performance Electric Propulsion Systems',
-    image: '/502600528_1288053829474907_1085984098804425308_n.jpg',
+    image: import.meta.env.BASE_URL + '502600528_1288053829474907_1085984098804425308_n.jpg',
     intro: 'STARD specializes in bespoke radial-flux and axial-flux motor integration. We develop multi-motor architectures — Dual, Triple, and Quad-motor setups — capable of delivering up to 1,500kW+ of peak power.',
     sections: [
       {
@@ -37,7 +37,7 @@ const serviceModals: ServiceModal[] = [
     id: 'battery',
     title: 'Advanced Battery Systems',
     headline: 'FIA-Certified Energy Storage Solutions',
-    image: '/2022_FORD_E-TRANSIT_SUPERVAN_23.webp',
+    image: import.meta.env.BASE_URL + '2022_FORD_E-TRANSIT_SUPERVAN_23.webp',
     intro: 'Our proprietary STARD REVO Battery Systems feature immersion cooling technology, allowing for continuous high-discharge rates without thermal throttling — even under the most extreme racing conditions.',
     sections: [
       {
@@ -59,7 +59,7 @@ const serviceModals: ServiceModal[] = [
     id: 'vcu',
     title: 'Vehicle Control Systems (VCU)',
     headline: 'The Intelligent Brain of the EV',
-    image: '/483994457_1220762459537378_4467373113225619581_n.jpg',
+    image: import.meta.env.BASE_URL + '483994457_1220762459537378_4467373113225619581_n.jpg',
     intro: 'We develop in-house control software that manages the complex interaction between multiple motors, battery management, and driver inputs — all in real-time with sub-millisecond response.',
     sections: [
       {
@@ -81,7 +81,7 @@ const serviceModals: ServiceModal[] = [
     id: 'vehicle',
     title: 'Complete Vehicle Engineering',
     headline: 'From Concept to FIA Homologation',
-    image: '/109965277_3000882840037309_3005027767678789798_n.jpg',
+    image: import.meta.env.BASE_URL + '109965277_3000882840037309_3005027767678789798_n.jpg',
     intro: 'STARD provides a full "Turnkey" solution. We take a production vehicle — like the Ford Mustang Mach-E or F-150 — and re-engineer it from the ground up for international competition.',
     sections: [
       {
@@ -154,7 +154,7 @@ function App() {
     <div className="app">
       <header className="header">
         <a href="#about" className="logo-link">
-          <img src="/stard-logo.png" alt="STARD Logo" className="logo-img" />
+          <img src={`${import.meta.env.BASE_URL}stard-logo.png`} alt="STARD Logo" className="logo-img" />
         </a>
         <nav className="nav">
           <a href="#home">Home</a>
@@ -187,7 +187,7 @@ function App() {
           <hr className="section-line" />
           <div className="service-list">
             <div className="service">
-              <img src="/502600528_1288053829474907_1085984098804425308_n.jpg" alt="EV Powertrain Development" className="service-img" />
+              <img src={`${import.meta.env.BASE_URL}502600528_1288053829474907_1085984098804425308_n.jpg`} alt="EV Powertrain Development" className="service-img" />
               <div className="service-content">
                 <h3>EV Powertrain Development</h3>
                 <p>Custom high-performance electric motors and advanced inverter integration, engineered for the extreme demands of professional motorsport and OEM applications.</p>
@@ -195,7 +195,7 @@ function App() {
               </div>
             </div>
             <div className="service">
-              <img src="/2022_FORD_E-TRANSIT_SUPERVAN_23.webp" alt="Advanced Battery Systems" className="service-img" />
+              <img src={`${import.meta.env.BASE_URL}2022_FORD_E-TRANSIT_SUPERVAN_23.webp`} alt="Advanced Battery Systems" className="service-img" />
               <div className="service-content">
                 <h3>Advanced Battery Systems</h3>
                 <p>FIA-certified, high-discharge STARD REVO battery packs with sub-20 minute charging capabilities — designed for safety, power density, and endurance.</p>
@@ -203,7 +203,7 @@ function App() {
               </div>
             </div>
             <div className="service">
-              <img src="/483994457_1220762459537378_4467373113225619581_n.jpg" alt="Vehicle Control Systems" className="service-img" />
+              <img src={`${import.meta.env.BASE_URL}483994457_1220762459537378_4467373113225619581_n.jpg`} alt="Vehicle Control Systems" className="service-img" />
               <div className="service-content">
                 <h3>Vehicle Control Systems</h3>
                 <p>Proprietary VCU software for advanced Torque Vectoring, traction control, and intelligent energy management — the brain behind every STARD powertrain.</p>
@@ -211,7 +211,7 @@ function App() {
               </div>
             </div>
             <div className="service">
-              <img src="/109965277_3000882840037309_3005027767678789798_n.jpg" alt="Complete Vehicle Engineering" className="service-img" />
+              <img src={`${import.meta.env.BASE_URL}109965277_3000882840037309_3005027767678789798_n.jpg`} alt="Complete Vehicle Engineering" className="service-img" />
               <div className="service-content">
                 <h3>Complete Vehicle Engineering</h3>
                 <p>Full-cycle development from concept and CAD design through prototyping, FIA homologation, track testing, and race-day technical support.</p>
