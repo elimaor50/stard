@@ -900,7 +900,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   /* Hero */
   .hero {
     min-height: 100vh;
-    padding: 5rem 1rem 2rem;
+    padding: 2rem 1rem;
   }
 
   .hero h1 {
@@ -923,6 +923,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   /* About */
   .about {
     min-height: 100vh;
+    padding: 2rem 1.2rem;
     justify-content: center;
     scroll-margin-top: 90px;
   }
@@ -953,6 +954,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   /* Services */
   .services {
     min-height: 100vh;
+    padding: 2rem 1rem;
     justify-content: center;
     scroll-margin-top: 90px;
   }
@@ -995,6 +997,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   /* Contact */
   .contact {
     min-height: 100vh;
+    padding: 2rem 1.2rem;
     justify-content: center;
     scroll-margin-top: 90px;
   }
