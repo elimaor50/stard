@@ -136,84 +136,157 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   color: #b0b0c0;
 }
 
-.hero-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 28px;
+
+/* ===== Hero Showcase Cards ===== */
+@keyframes showcaseFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
 
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
 
-/* ===== Hero Highlight Cards ===== */
-.hero-highlights {
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.hero-showcase {
   display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin: 40px 0 36px;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.showcase-card {
+  position: relative;
+  display: flex;
+  align-items: center;
   gap: 24px;
-  justify-content: center;
-  margin-bottom: 28px;
-  flex-wrap: wrap;
-}
-
-.highlight-card {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 16px 28px 16px 16px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(0,212,255,0.06) 100%);
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  border-radius: 16px;
-  backdrop-filter: blur(16px);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  min-width: 280px;
-  max-width: 340px;
-}
-
-.highlight-card:hover {
-  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(0,212,255,0.1) 100%);
-  border-color: rgba(0, 212, 255, 0.5);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(0, 212, 255, 0.15), 0 0 0 1px rgba(0,212,255,0.1);
-}
-
-.highlight-img-wrapper {
-  width: 72px;
-  height: 72px;
-  min-width: 72px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 28px 36px;
+  background: linear-gradient(145deg, rgba(15,15,25,0.85) 0%, rgba(0,20,40,0.75) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  text-decoration: none;
+  color: inherit;
+  min-width: 340px;
+  max-width: 420px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: showcaseFloat 6s ease-in-out infinite;
 }
 
-.highlight-icon-img {
-  width: 56px;
-  height: 56px;
+.showcase-card:nth-child(2) {
+  animation-delay: -3s;
+}
+
+.showcase-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,212,255,0.07), transparent);
+  transition: none;
+  pointer-events: none;
+}
+
+.showcase-card:hover::before {
+  animation: shimmer 0.8s ease forwards;
+}
+
+.showcase-card:hover {
+  border-color: rgba(0, 212, 255, 0.6);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(0, 212, 255, 0.2),
+    0 0 40px rgba(0, 212, 255, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.showcase-card:active {
+  transform: translateY(-2px) scale(0.98);
+  transition: all 0.1s;
+}
+
+.showcase-img-container {
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.showcase-img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+  transition: all 0.4s ease;
 }
 
-.highlight-text {
+.showcase-card:hover .showcase-img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 8px 24px rgba(0,212,255,0.3));
+}
+
+.showcase-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
 }
 
-.highlight-label {
-  color: #ffffff;
-  font-size: 1rem;
+.showcase-tag {
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.3px;
-  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #00d4ff;
+  opacity: 0.8;
 }
 
-.highlight-sub {
+.showcase-title {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.showcase-subtitle {
   color: #00d4ff;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.3px;
+  margin: 0;
   opacity: 0.9;
+}
+
+.showcase-glow {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(0,212,255,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.showcase-card:nth-child(2) .showcase-glow {
+  animation-delay: -2s;
 }
 /* ===== Buttons ===== */
 .cta {
@@ -840,13 +913,6 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
     max-width: 95%;
   }
 
-  .hero-highlights {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-
   .cta {
     padding: 12px 28px;
     font-size: 0.9rem;
@@ -1100,41 +1166,44 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   .social-link svg {
     width: 20px;
     height: 20px;
-  }
-
   
-  /* Highlight cards mobile */
-  .hero-highlights {
+  /* Showcase cards mobile */
+  .hero-showcase {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
+    margin: 24px 0 20px;
   }
 
-  .highlight-card {
+  .showcase-card {
     min-width: unset;
-    max-width: 300px;
-    width: 100%;
-    padding: 12px 18px 12px 12px;
-    gap: 14px;
+    max-width: 320px;
+    width: 90%;
+    padding: 18px 22px;
+    gap: 16px;
+    animation: none;
   }
 
-  .highlight-img-wrapper {
-    width: 52px;
-    height: 52px;
-    min-width: 52px;
-    border-radius: 10px;
+  .showcase-img-container {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
   }
 
-  .highlight-icon-img {
-    width: 40px;
-    height: 40px;
+  .showcase-tag {
+    font-size: 0.6rem;
   }
 
-  .highlight-label {
-    font-size: 0.85rem;
+  .showcase-title {
+    font-size: 1.05rem;
   }
 
-  .highlight-sub {
-    font-size: 0.75rem;
+  .showcase-subtitle {
+    font-size: 0.8rem;
   }
+
+  .showcase-glow {
+    display: none;
+  }
+}
 }

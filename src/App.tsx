@@ -167,25 +167,29 @@ function App() {
         <section id="home" className="hero">
           <h1>The Future of High-Performance Electrification</h1>
           <p>Pioneering EV technology for Global Motorsport and Automotive Manufacturers.</p>
-          <div className="hero-highlights">
-              <div className="highlight-card">
-                <div className="highlight-img-wrapper">
-                  <img src={`${import.meta.env.BASE_URL}119-1191347_ford-racing-logo-png-transparent-ford-performance-racing-logo.png`} alt="Ford Performance" className="highlight-icon-img" />
+          <div className="hero-showcase">
+              <a href="#services" className="showcase-card">
+                <div className="showcase-img-container">
+                  <img src={`${import.meta.env.BASE_URL}119-1191347_ford-racing-logo-png-transparent-ford-performance-racing-logo.png`} alt="Ford Performance" className="showcase-img" />
                 </div>
-                <div className="highlight-text">
-                  <span className="highlight-label">Official Ford Performance</span>
-                  <span className="highlight-sub">Technical Partner</span>
+                <div className="showcase-info">
+                  <span className="showcase-tag">Partnership</span>
+                  <h3 className="showcase-title">Official Ford Performance</h3>
+                  <p className="showcase-subtitle">Technical Partner</p>
                 </div>
-              </div>
-              <div className="highlight-card">
-                <div className="highlight-img-wrapper">
-                  <img src={`${import.meta.env.BASE_URL}STARD-Ford-Fiesta-ERX2-1.webp`} alt="Electric Rallycross" className="highlight-icon-img" />
+                <div className="showcase-glow"></div>
+              </a>
+              <a href="#services" className="showcase-card">
+                <div className="showcase-img-container">
+                  <img src={`${import.meta.env.BASE_URL}STARD-Ford-Fiesta-ERX2-1.webp`} alt="Electric Rallycross" className="showcase-img" />
                 </div>
-                <div className="highlight-text">
-                  <span className="highlight-label">World's First</span>
-                  <span className="highlight-sub">All-Electric Rallycross Car</span>
+                <div className="showcase-info">
+                  <span className="showcase-tag">Achievement</span>
+                  <h3 className="showcase-title">World's First</h3>
+                  <p className="showcase-subtitle">All-Electric Rallycross Car</p>
                 </div>
-              </div>
+                <div className="showcase-glow"></div>
+              </a>
           </div>
           <a href="#about" className="cta">Discover More</a>
         </section>
