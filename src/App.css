@@ -161,6 +161,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   align-items: center;
   gap: 6px;
   padding: 24px 36px;
+  max-width: 240px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(0, 212, 255, 0.2);
   border-radius: 16px;
@@ -178,6 +179,13 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 .highlight-icon {
   font-size: 2rem;
   margin-bottom: 4px;
+}
+
+.highlight-icon-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .highlight-label {
