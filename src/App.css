@@ -498,9 +498,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   background: rgba(0, 212, 255, 0.05);
 }
 
-.contact-detail-icon {
-  font-size: 1.1rem;
-}
+
 
 .contact-detail-item span,
 .contact-detail-item a {
@@ -512,6 +510,44 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
 .contact-detail-item a:hover {
   color: #00d4ff;
+}
+
+
+.contact-social {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #a0a0b0;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #00d4ff;
+  border-color: #00d4ff;
+  background: rgba(0, 212, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.2);
+}
+
+.contact-detail-icon {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #00d4ff;
+  width: 20px;
+  text-align: center;
 }
 
 /* ===== Footer ===== */
@@ -1064,5 +1100,19 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   .contact-detail-item span,
   .contact-detail-item a {
     font-size: 0.8rem;
+  }
+
+  .contact-social {
+    gap: 12px;
+  }
+
+  .social-link {
+    width: 42px;
+    height: 42px;
+  }
+
+  .social-link svg {
+    width: 20px;
+    height: 20px;
   }
 }
