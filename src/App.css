@@ -1,4 +1,4 @@
-﻿/* ===== Reset & Base ===== */
+/* ===== Reset & Base ===== */
 html {
   scroll-behavior: smooth;
   overflow: hidden;
@@ -898,7 +898,7 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
   /* Hero */
   .hero {
     min-height: auto;
-    padding: 6.5rem 1rem 1.5rem;
+    padding: 5.5rem 1rem 1.5rem;
   }
 
   .hero h1 {
@@ -920,7 +920,8 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
   /* About */
   .about {
-    padding: 7rem 1.2rem 2rem;
+    padding: 5.5rem 1.2rem 2rem;
+    min-height: auto;
     justify-content: flex-start;
     scroll-margin-top: 100px;
   }
@@ -950,7 +951,8 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
   /* Services */
   .services {
-    padding: 7rem 1rem 2rem;
+    padding: 5.5rem 1rem 2rem;
+    min-height: auto;
     justify-content: flex-start;
     scroll-margin-top: 100px;
   }
@@ -992,7 +994,8 @@ body > div[style*="position: fixed"][style*="right: 0"][style*="z-index: 2147483
 
   /* Contact */
   .contact {
-    padding: 7rem 1.2rem 2rem;
+    padding: 5.5rem 1.2rem 2rem;
+    min-height: auto;
     justify-content: flex-start;
     scroll-margin-top: 100px;
   }

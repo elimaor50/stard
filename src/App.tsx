@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 interface ServiceModal {
@@ -16,7 +16,7 @@ const serviceModals: ServiceModal[] = [
     title: 'EV Powertrain Development',
     headline: 'High-Performance Electric Propulsion Systems',
     image: import.meta.env.BASE_URL + '502600528_1288053829474907_1085984098804425308_n.jpg',
-    intro: 'STARD specializes in bespoke radial-flux and axial-flux motor integration. We develop multi-motor architectures ג€” Dual, Triple, and Quad-motor setups ג€” capable of delivering up to 1,500kW+ of peak power.',
+    intro: 'STARD specializes in bespoke radial-flux and axial-flux motor integration. We develop multi-motor architectures -- Dual, Triple, and Quad-motor setups -- capable of delivering up to 1,500kW+ of peak power.',
     sections: [
       {
         heading: 'Key Achievement',
@@ -26,9 +26,9 @@ const serviceModals: ServiceModal[] = [
         heading: 'Engineering Focus',
         content: 'Our powertrain division concentrates on three critical pillars:',
         items: [
-          'Power density ג€” maximizing output per kilogram of motor mass',
-          'Thermal management efficiency ג€” sustaining peak power through advanced liquid cooling circuits',
-          'Weight reduction ג€” through advanced composite motor housing and lightweight integration',
+          'Power density -- maximizing output per kilogram of motor mass',
+          'Thermal management efficiency -- sustaining peak power through advanced liquid cooling circuits',
+          'Weight reduction -- through advanced composite motor housing and lightweight integration',
         ],
       },
     ],
@@ -38,15 +38,15 @@ const serviceModals: ServiceModal[] = [
     title: 'Advanced Battery Systems',
     headline: 'FIA-Certified Energy Storage Solutions',
     image: import.meta.env.BASE_URL + '2022_FORD_E-TRANSIT_SUPERVAN_23.webp',
-    intro: 'Our proprietary STARD REVO Battery Systems feature immersion cooling technology, allowing for continuous high-discharge rates without thermal throttling ג€” even under the most extreme racing conditions.',
+    intro: 'Our proprietary STARD REVO Battery Systems feature immersion cooling technology, allowing for continuous high-discharge rates without thermal throttling -- even under the most extreme racing conditions.',
     sections: [
       {
         heading: 'Technical Specifications',
         content: 'The REVO platform is built around the following core technologies:',
         items: [
-          'Chemistry ג€” High-performance Li-ion cells optimized for power-to-weight ratio',
-          'Charging ג€” Ultra-fast 0ג€“80% in under 20 minutes, designed for Rallycross turnaround',
-          'Safety ג€” Fully FIA 8865-2015 compliant crash-proof casing with integrated fire suppression',
+          'Chemistry -- High-performance Li-ion cells optimized for power-to-weight ratio',
+          'Charging -- Ultra-fast 0-80% in under 20 minutes, designed for Rallycross turnaround',
+          'Safety -- Fully FIA 8865-2015 compliant crash-proof casing with integrated fire suppression',
         ],
       },
       {
@@ -60,15 +60,15 @@ const serviceModals: ServiceModal[] = [
     title: 'Vehicle Control Systems (VCU)',
     headline: 'The Intelligent Brain of the EV',
     image: import.meta.env.BASE_URL + '483994457_1220762459537378_4467373113225619581_n.jpg',
-    intro: 'We develop in-house control software that manages the complex interaction between multiple motors, battery management, and driver inputs ג€” all in real-time with sub-millisecond response.',
+    intro: 'We develop in-house control software that manages the complex interaction between multiple motors, battery management, and driver inputs -- all in real-time with sub-millisecond response.',
     sections: [
       {
         heading: 'Core Capabilities',
         content: 'Our VCU platform delivers:',
         items: [
-          'Torque Vectoring ג€” millisecond-level distribution of torque to each individual wheel for superior cornering grip and stability',
-          'Regenerative Braking Optimization ג€” maximizing energy recovery while maintaining natural brake feel and vehicle stability',
-          'Custom Drive Modes ג€” seamless switching between "Eco-Transport", "Track Attack", and "Drift" modes',
+          'Torque Vectoring -- millisecond-level distribution of torque to each individual wheel for superior cornering grip and stability',
+          'Regenerative Braking Optimization -- maximizing energy recovery while maintaining natural brake feel and vehicle stability',
+          'Custom Drive Modes -- seamless switching between "Eco-Transport", "Track Attack", and "Drift" modes',
         ],
       },
       {
@@ -82,16 +82,16 @@ const serviceModals: ServiceModal[] = [
     title: 'Complete Vehicle Engineering',
     headline: 'From Concept to FIA Homologation',
     image: import.meta.env.BASE_URL + '109965277_3000882840037309_3005027767678789798_n.jpg',
-    intro: 'STARD provides a full "Turnkey" solution. We take a production vehicle ג€” like the Ford Mustang Mach-E or F-150 ג€” and re-engineer it from the ground up for international competition.',
+    intro: 'STARD provides a full "Turnkey" solution. We take a production vehicle -- like the Ford Mustang Mach-E or F-150 -- and re-engineer it from the ground up for international competition.',
     sections: [
       {
         heading: 'Services Included',
         content: 'Our complete vehicle engineering pipeline covers:',
         items: [
-          'Full CAD/CAE Design and Simulation ג€” from initial concept through structural analysis',
-          'Composite Bodywork ג€” lightweight carbon fiber panels and aerodynamic optimization',
-          'Suspension Geometry Redesign ג€” purpose-built for high-torque EV applications',
-          'FIA Homologation Processing ג€” formal certification for international racing series',
+          'Full CAD/CAE Design and Simulation -- from initial concept through structural analysis',
+          'Composite Bodywork -- lightweight carbon fiber panels and aerodynamic optimization',
+          'Suspension Geometry Redesign -- purpose-built for high-torque EV applications',
+          'FIA Homologation Processing -- formal certification for international racing series',
         ],
       },
       {
@@ -197,8 +197,8 @@ function App() {
         <section id="about" className="about">
           <h2>Story of STARD</h2>
           <hr className="section-line" />
-          <p>STARD ג€” Stohl Advanced Research and Development ג€” is part of the Stohl Group, founded by WRC legend Manfred Stohl. Based in Gross-Enzersdorf near Vienna, Austria, STARD bridges decades of traditional World Rally Championship experience with the new era of electric mobility.</p>
-          <p>We don't just build cars ג€” we develop in-house battery systems (STARD REVO), proprietary VCU software, and complete high-voltage powertrains that comply with the strictest FIA safety standards. As official technical partners of Ford Performance, we engineered the Ford SuperVan 4.2, the F-150 Switchgear, and the legendary Mach-E 1400.</p>
+          <p>STARD -- Stohl Advanced Research and Development -- is part of the Stohl Group, founded by WRC legend Manfred Stohl. Based in Gross-Enzersdorf near Vienna, Austria, STARD bridges decades of traditional World Rally Championship experience with the new era of electric mobility.</p>
+          <p>We don't just build cars -- we develop in-house battery systems (STARD REVO), proprietary VCU software, and complete high-voltage powertrains that comply with the strictest FIA safety standards. As official technical partners of Ford Performance, we engineered the Ford SuperVan 4.2, the F-150 Switchgear, and the legendary Mach-E 1400.</p>
           <p className="about-mission">"To push the boundaries of electric propulsion in the most extreme racing environments on Earth."</p>
         </section>
 
@@ -218,7 +218,7 @@ function App() {
               <img src={`${import.meta.env.BASE_URL}2022_FORD_E-TRANSIT_SUPERVAN_23.webp`} alt="Advanced Battery Systems" className="service-img" />
               <div className="service-content">
                 <h3>Advanced Battery Systems</h3>
-                <p>FIA-certified, high-discharge STARD REVO battery packs with sub-20 minute charging capabilities ג€” designed for safety, power density, and endurance.</p>
+                <p>FIA-certified, high-discharge STARD REVO battery packs with sub-20 minute charging capabilities -- designed for safety, power density, and endurance.</p>
                 <button className="cta" onClick={() => openModal('battery')}>Learn More</button>
               </div>
             </div>
@@ -226,7 +226,7 @@ function App() {
               <img src={`${import.meta.env.BASE_URL}483994457_1220762459537378_4467373113225619581_n.jpg`} alt="Vehicle Control Systems" className="service-img" />
               <div className="service-content">
                 <h3>Vehicle Control Systems</h3>
-                <p>Proprietary VCU software for advanced Torque Vectoring, traction control, and intelligent energy management ג€” the brain behind every STARD powertrain.</p>
+                <p>Proprietary VCU software for advanced Torque Vectoring, traction control, and intelligent energy management -- the brain behind every STARD powertrain.</p>
                 <button className="cta" onClick={() => openModal('vcu')}>Learn More</button>
               </div>
             </div>
@@ -244,7 +244,7 @@ function App() {
         <section id="contact" className="contact">
           <h2>Partner With Us</h2>
           <hr className="section-line" />
-          <p>Partner with us for your next high-performance EV project. Whether you're an automotive OEM, professional race team, or specialized tech innovator ג€” let's build the future together.</p>
+          <p>Partner with us for your next high-performance EV project. Whether you're an automotive OEM, professional race team, or specialized tech innovator -- let's build the future together.</p>
           <p className="contact-address">Stohl Strasse 1, 2301 Gross-Enzersdorf, Austria</p>
           <div className="contact-details">
             <div className="contact-detail-item">
@@ -282,7 +282,7 @@ function App() {
       {currentModal && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeModal}>ג•</button>
+            <button className="modal-close" onClick={closeModal}>X</button>
             <div className="modal-hero">
               <img src={currentModal.image} alt={currentModal.title} className="modal-hero-img" />
               <div className="modal-hero-overlay">
@@ -321,7 +321,7 @@ function App() {
       )}
 
       <footer className="footer">
-        <p>&copy; 2026 STARD ג€” Stohl Advanced Research and Development. All rights reserved.</p>
+        <p>&copy; 2026 STARD -- Stohl Advanced Research and Development. All rights reserved.</p>
         <p className="footer-address">Stohl Strasse 1, 2301 Gross-Enzersdorf, Austria</p>
       </footer>
     </div>
